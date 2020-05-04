@@ -18,10 +18,11 @@ public class D_Kombinasi {
 	
     // IF then [While [IF then EndIF] EndWhile] EndIF
 	public boolean isBilPrima_43(int bil) {
-		boolean isPrima = true;
+		boolean isPrima = false;
 		int temp;
 		
 		if (bil>1) {
+			isPrima = true;
 			temp = bil-1;
 			while (temp > 1 && isPrima==true) {
 				if (bil % temp == 0) {
@@ -151,14 +152,14 @@ public class D_Kombinasi {
 		int i, idx;
 		boolean ketemu = false;
 		
-		idx = 0;
+		idx = -1;
 		if(N>0) {
 			if(cari<=0){
 				if(cari<0){
 					idx = -1;
 				}
 			}else{
-				idx = -2;
+				idx = -1;
 				i   = 0;
 				while (i<N || ketemu == false){
 					if (bil[i] == cari) {

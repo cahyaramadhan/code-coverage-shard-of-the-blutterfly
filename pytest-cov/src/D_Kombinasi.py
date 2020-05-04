@@ -13,9 +13,10 @@ class D_Kombinasi():
 
     # IF then [While [IF then EndIF] EndWhile] EndIF
 	def isBilPrima_43(self, bil):
-		isPrima = True
+		isPrima = False
 
 		if(bil > 1):
+			isPrima = True
 			temp = bil-1
 			while(temp > 1 and isPrima == True):
 				if(bil % temp == 0):
@@ -70,13 +71,13 @@ class D_Kombinasi():
 	# IF then [IF then [IF then EndIF] else [While [IF then EndIF] EndWhile] EndIF] EndIF
 	def GetIndexByElemen_49(self, bil, N, cari):
 		ketemu = False
-		idx = 0
+		idx = -1
 		if(N > 0):
 			if(cari <= 0):
 				if(cari < 0):
 					idx = -1
 			else:
-				idx = -2
+				idx = -1
 				i = 0
 				while(i < N or ketemu == False):
 					if(bil[i] == cari):

@@ -24,9 +24,9 @@ class D_Kombinasi():
 		return isPrima
 
     # IF then [DoWhile [For [If then EndIF] EndFor] EndDoWhile] EndIF
-    def pengurutanBilangan_44(self) :
-        # consist of do..while
-        return "Invalid"
+	def pengurutanBilangan_44(self) :
+		# consist of do..while
+		return "Invalid"
 
     # IF then else [For [If then EndIf] EndFor] EndIF
 	def isAdaBil_45(self, bil, N, cari):
@@ -42,9 +42,9 @@ class D_Kombinasi():
 		return status
 
 	# IF then ElseIF then [DoWhile EndDoWhile] ElseIF [IF then [While EndWhile] else EndIF] else [IF EndIF] EndIF
-    def calPangkatDua_46_47(self) :
-        # consist of do..while
-        return "Invalid"
+	def calPangkatDua_46_47(self) :
+		# consist of do..while
+		return "Invalid"
 
     # IF then [IF then else [While EndWhile] EndIF For EndFor] else [For EndFor] EndIF
 	def desimalToBiner_48(self, bil):
@@ -87,7 +87,7 @@ class D_Kombinasi():
 		return idx
 
 	# IF then [IF then EndIF] else [DoWhile [IF then EndIF] EndDoWhile] EndIF
-    def GetElemenTerbesar_50(self) :
-        # consist of do..while
-        return "Invalid"
+	def GetElemenTerbesar_50(self) :
+		# consist of do..while
+		return "Invalid"
 

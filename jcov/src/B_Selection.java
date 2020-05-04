@@ -1,5 +1,3 @@
-package variasisc;
-
 import java.util.Scanner;
 
 public class B_Selection {

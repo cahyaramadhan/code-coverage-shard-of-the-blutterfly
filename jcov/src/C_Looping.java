@@ -1,5 +1,3 @@
-package variasisc;
-
 public class C_Looping {
 
 	/**

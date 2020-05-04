@@ -1,39 +1,31 @@
-package variasisc;
-
 public class D_Kombinasi {
-
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.print("print");
-	}
 	
     // IF then [For - EndFor] else EndIF
-	public void OutputBintang_42(int N){
+	public String OutputBintang_42(int N){
 		// Output bintang dilakukan jika N bernilai positif
 		int i;
+		String result = new String();
 		
 		if (N>0) {
 			for (i=1; i<=N; i++){
-				System.out.print("*");
+			    result += '*';
 			}
 		}else {
-			System.out.print("N invalid, harus bernilai positif");
+			result = "N invalid, harus bernilai positif";
 		}
+		return result;
 	}
 	
     // IF then [While [IF then EndIF] EndWhile] EndIF
 	public boolean isBilPrima_43(int bil) {
-		boolean isPrima = false;
+		boolean isPrima = true;
 		int temp;
 		
 		if (bil>1) {
 			temp = bil-1;
-			while (temp > 1 && isPrima==false) {
+			while (temp > 1 && isPrima==true) {
 				if (bil % temp == 0) {
-					isPrima = true;
+					isPrima = false;
 				}
 				temp = temp - 1;
 			}
@@ -67,7 +59,7 @@ public class D_Kombinasi {
 		String status = "tidak ketemu";
 		int i;
 		
-		if (N>0) {
+		if (N <= 0) {
 			status = "Deretan Bilangan Kosong";
 		}else{
 			for (i=0; i<N; i++) {
@@ -168,7 +160,7 @@ public class D_Kombinasi {
 			}else{
 				idx = -2;
 				i   = 0;
-				while (i<N || ketemu == true){
+				while (i<N || ketemu == false){
 					if (bil[i] == cari) {
 						ketemu = true;
 						idx = i;

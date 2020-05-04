@@ -78,7 +78,6 @@ class D_Kombinasi():
 			else:
 				idx = -2
 				i = 0
-				# while(i < N or ketemu == True):
 				while(i < N or ketemu == False):
 					if(bil[i] == cari):
 						ketemu = True

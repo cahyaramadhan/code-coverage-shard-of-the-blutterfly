@@ -13,12 +13,19 @@ def test_isBilPrima_43():
 	assert testObj.isBilPrima_43(7) == True
 	assert testObj.isBilPrima_43(10) == False
 
+def test_pengurutanBilangan_44():
+	assert testObj.pengurutanBilangan_44() == "Invalid"
+
 def test_isAdaBil_45():
 	deret = []
 	assert testObj.isAdaBil_45(deret, len(deret), 5) == "Deretan Bilangan Kosong"
 	deret = [1,2,3,4,5]
 	assert testObj.isAdaBil_45(deret, len(deret), 6) == "tidak ketemu"
 	assert testObj.isAdaBil_45(deret, len(deret), 5) == "bilangan ketemu"
+
+def test_calPangkatDua_46_47():
+	assert testObj.calPangkatDua_46_47() == "Invalid"
+
 
 def test_desimalToBiner_48():
 	assert testObj.desimalToBiner_48(-10) == [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]
@@ -34,3 +41,6 @@ def test_GetIndexByElemen_49():
 	assert testObj.GetIndexByElemen_49(deret, len(deret), 5) == 4
 	assert testObj.GetIndexByElemen_49(deret, len(deret), 0) == -1
 	assert testObj.GetIndexByElemen_49(deret, len(deret), -1) == -1
+
+def test_GetElemenTerbesar_50():
+	assert testObj.GetElemenTerbesar_50() == "Invalid"

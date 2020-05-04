@@ -161,7 +161,7 @@ public class D_Kombinasi {
 			}else{
 				idx = -1;
 				i   = 0;
-				while (i<N || ketemu == false){
+				while (i<N && ketemu == false){
 					if (bil[i] == cari) {
 						ketemu = true;
 						idx = i;

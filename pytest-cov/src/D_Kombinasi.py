@@ -46,7 +46,7 @@ class D_Kombinasi():
         # consist of do..while
         return "Invalid"
 
-    # IF then [if then else [While EndWhile] EndIF For EndFor] else [For EndFor] EndIF
+    # IF then [IF then else [While EndWhile] EndIF For EndFor] else [For EndFor] EndIF
 	def desimalToBiner_48(self, bil):
 		biner = [0] * 10
 		if(bil >= 0):

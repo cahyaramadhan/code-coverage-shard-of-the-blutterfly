@@ -49,7 +49,7 @@ class A_Sequence():
 	def isPointNotOrigin(self, x, y):
 		return (x != 0) or (y != 0)
 
-    # Ekspresi Relational dan Boolean
+    # Ekspresi Relational
 	def isSuhuPadat(self, suhu):
 		return (suhu <= 0)
 
@@ -57,6 +57,6 @@ class A_Sequence():
 	def isSuhuCair(self, suhu):
 		return (suhu >= 0 and suhu <= 100)
 
-    # Ekspresi Relational dan Boolean
+    # Ekspresi Relational
 	def isSuhuUap(self, suhu):
 		return (suhu >= 100)

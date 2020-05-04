@@ -90,11 +90,11 @@ public class A_Sequence {
 		return isNotOrigin;
 	}
 	
-    // Ekspresi Relational dan Boolean
+    // Ekspresi Relational
 	public boolean isSuhuPadat(int suhu){
 		boolean isPadat;
 		
-		isPadat = (suhu<= 0); 
+		isPadat = (suhu <= 0); 
 		return isPadat;
 	}
 	
@@ -102,11 +102,11 @@ public class A_Sequence {
 	public boolean isSuhuCair(int suhu){
 		boolean isCair;
 		
-		isCair = (suhu >=0 && suhu<= 100);
+		isCair = (suhu > 0 && suhu <= 100);
 		return isCair;
 	}
 	
-    // Ekspresi Relational dan Boolean
+    // Ekspresi Relational
 	public boolean isSuhuUap(int suhu){
 		boolean isUap;
 		

@@ -21,28 +21,28 @@ def test_isYearKabisat():
 
 def test_isPointOrigin():
 	assert testObj.isPointOrigin(0,0) == True
-	assert testObj.isPointOrigin(0,2) == False
 	assert testObj.isPointOrigin(2,0) == False
+	assert testObj.isPointOrigin(0,2) == False
 
 def test_isPointKuadran1():
 	assert testObj.isPointKuadran1(2,2) == True
-	assert testObj.isPointKuadran1(2,0) == False
 	assert testObj.isPointKuadran1(0,2) == False
+	assert testObj.isPointKuadran1(2,0) == False
 
 def test_isPointKuadran2():
 	assert testObj.isPointKuadran2(-2,2) == True
-	assert testObj.isPointKuadran2(-2,0) == False
 	assert testObj.isPointKuadran2(0,2) == False
+	assert testObj.isPointKuadran2(-2,0) == False
 
 def test_isPointKuadran3():
 	assert testObj.isPointKuadran3(-2,-2) == True
-	assert testObj.isPointKuadran3(-2,0) == False
 	assert testObj.isPointKuadran3(0,-2) == False
+	assert testObj.isPointKuadran3(-2,0) == False
 
 def test_isPointKuadran4():
 	assert testObj.isPointKuadran4(2,-2) == True
-	assert testObj.isPointKuadran4(2,0) == False
 	assert testObj.isPointKuadran4(0,-2) == False
+	assert testObj.isPointKuadran4(2,0) == False
 
 def test_isPointNotOrigin():
 	assert testObj.isPointNotOrigin(2,0) == True
@@ -50,16 +50,16 @@ def test_isPointNotOrigin():
 	assert testObj.isPointNotOrigin(0,0) == False
 
 def test_isSuhuPadat():
-	assert testObj.isSuhuPadat(-50) == False
+	assert testObj.isSuhuPadat(-50) == True
 	assert testObj.isSuhuPadat(0) == True
-	assert testObj.isSuhuPadat(50) == True
-	assert testObj.isSuhuPadat(100) == True
-	assert testObj.isSuhuPadat(150) == False
+	assert testObj.isSuhuPadat(50) == False
 
 def test_isSuhuCair():
-	assert testObj.isSuhuCair(-50) == True
+	assert testObj.isSuhuCair(-50) == False
 	assert testObj.isSuhuCair(0) == True
-	assert testObj.isSuhuCair(50) == False
+	assert testObj.isSuhuCair(50) == True
+	assert testObj.isSuhuCair(100) == True
+	assert testObj.isSuhuCair(150) == False
 
 def test_isSuhuUap():
 	assert testObj.isSuhuUap(50) == False

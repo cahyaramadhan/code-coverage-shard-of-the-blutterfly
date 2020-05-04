@@ -1,11 +1,13 @@
 import unittest
-from faktorial import *
+from src.faktorial import faktorial
+
+testObj = faktorial()
 
 def test_faktorial_3() :
-  assert factorial(3) == 6
+  assert testObj.factorial(3) == 6
 
 def test_faktorial_5() :
-  assert factorial(5) == 120
+  assert testObj.factorial(5) == 120
 
 def test_faktorial_wrong() :
-  assert factorial(-2) == -1
+  assert testObj.factorial(-2) == -1

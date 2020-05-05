@@ -49,6 +49,7 @@ class b_selection_Test(unittest.TestCase) :
         self.assertEqual(bi.getKuadran_09(-1, 1), 2) # 1 2 4 5 7 8 13
         self.assertEqual(bi.getKuadran_09(-1, -1), 3) # 1 2 4 5 7 9 10 13
         self.assertEqual(bi.getKuadran_09(1, -1), 4) # 1 2 4 5 7 11 12 13
+        # no case for 1 2 4 5 7 11 13
         # no case for 1 2 3 4 [other node] 13
         # no case for 1 2 4 13
 
@@ -62,20 +63,14 @@ class b_selection_Test(unittest.TestCase) :
         self.assertEqual(bi.getNumberDayMonth2_10(4, 2020), 30) # 1 3 4 9
         self.assertEqual(bi.getNumberDayMonth2_10(2, 2100), 28) # 1 3 5 6 7 9
         self.assertEqual(bi.getNumberDayMonth2_10(2, 2000), 29) # 1 3 5 6 8 9
+        self.assertEqual(bi.getNumberDayMonth2_10(13, 2000), -1) # 1 3 5 9
 
         # variasi 12
         self.assertEqual(bi.getSizeKaos_12(180, 70), 'X') # 1 2 3 4 9
-        self.assertEqual(bi.getSizeKaos_12(180, 100), ' ') # 1 2 3 9
+        self.assertEqual(bi.getSizeKaos_12(180, 100), 'Unknown') # 1 2 3 9
         self.assertEqual(bi.getSizeKaos_12(160, 70), 'L') # 1 2 5 6 7 9
-        self.assertEqual(bi.getSizeKaos_12(160, 100), ' ') # 1 2 5 6 9
+        self.assertEqual(bi.getSizeKaos_12(160, 100), 'Unknown') # 1 2 5 6 9
         self.assertEqual(bi.getSizeKaos_12(140, 70), 'M') # 1 2 5 8 9
-
-        # Ga tau ini variasi struktur mana sih
-        self.assertEqual(bi.nilaiTerbilang(-2222), '(negatif) dua ribudua ratusdua puluhdua ')
-        self.assertEqual(bi.nilaiTerbilang(-1112), '(negatif) seribuseratusdua belas')
-        self.assertEqual(bi.nilaiTerbilang(-1111), '(negatif) seribuseratussebelas')
-        self.assertEqual(bi.nilaiTerbilang(-1110), '(negatif) seribuseratussepuluh')
-        self.assertEqual(bi.nilaiTerbilang(0), 'nol')
 
         # Invalid
         self.assertEqual(bi.getDayFromNumber_07(), "Invalid")

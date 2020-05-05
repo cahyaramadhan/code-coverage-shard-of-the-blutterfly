@@ -1,13 +1,13 @@
 class ValidasiHoles :
-  def countHoles(sentence) :
+  def countHoles(self, sentence) :
     jumlahLubang = 0
 
     for i in range(0, len(sentence)) :
-      if (sentence[i] == 'A' || sentence[i] == 'D' || 
-          sentence[i] == 'O' || sentence[i] == 'P' || 
-          sentence[i] == 'Q' || sentence[i] == 'R') :
+      if (sentence[i] == 'A' or sentence[i] == 'D' or \
+          sentence[i] == 'O' or sentence[i] == 'P' or \
+          sentence[i] == 'Q' or sentence[i] == 'R') :
         jumlahLubang = jumlahLubang + 1
-      else if (sentence[i] == 'B')
+      elif (sentence[i] == 'B') :
         jumlahLubang = jumlahLubang + 2
 
     return jumlahLubang

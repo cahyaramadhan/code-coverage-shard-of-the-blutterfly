@@ -1,5 +1,5 @@
 class faktorial :
-  def factorial(n) :
+  def factorial(self, n) :
     if (n < 0) :
       return -1
     else :

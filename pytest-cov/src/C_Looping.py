@@ -1,9 +1,9 @@
 class c_looping :
-  def OutputBintang_21(n) :
+  def OutputBintang_21(self, n) :
     for i in range(0, n) :
       print("*", end="")
 
-  def jumBil_22(bil, n) :
+  def jumBil_22(self, bil, n) :
     sum = 0
     i = 0
     while (i < n) :
@@ -11,31 +11,32 @@ class c_looping :
       i = i + 1
     return sum
 
-  def jumBil_23(bil, n) :
+  def jumBil_23(self, bil, n) :
     sum = 0
     i = 0
-    while (true) :
+    while (True) :
       sum = sum + bil[i]
       i = i + 1
       if (i > n) :
         break
     return sum
 
-  def outputFaktorBilangan_24(n) :
+  def outputFaktorBilangan_24(self, n) :
     print("faktor-faktornya")
     for i in range(1, n + 1) :
       if (n % i == 0) :
         print(i, end=" ")
 
-  def cariBil_25(bil, n, cari)
+  def cariBil_25(self, bil, n, cari) :
     i = 0
-    while (i < n && ketemu == false) :
+    ketemu = False
+    while (i < n and ketemu == False) :
       if (bil[i] == cari) :
-        ketemu = true
+        ketemu = True
       i = i + 1
     return ketemu
 
-  def outputDeretGanjilGenap(n) :  
+  def outputDeretGanjilGenap(self, n) :  
     i = 0
     nGanjil = 0
     nGenap = 0
@@ -59,24 +60,24 @@ class c_looping :
     for i in range(0, nGenap) :
       print(deretGenap[i] + " ")
 
-  def guessNumber_28(guessBil, n, secret) :
+  def guessNumber_28(self, guessBil, n, secret) :
     i = 0
-    ketemu = false
-    while (i < n && ketemu == false) :
+    ketemu = False
+    while (i < n and ketemu == False) :
       if (guessBil[i] < secret) :
         print("too low")
         print("try again")
-      else if (guessBil[i] > secret) :
+      elif (guessBil[i] > secret) :
         print("too high")
         print("try again")
       else :
         print("got em")
         print("secret =", secret)
-        ketemu = true
+        ketemu = True
       i = i + 1
     return ketemu
 
-  def OutputPolaXYZ_29(n, x) :
+  def OutputPolaXYZ_29(self, n, x) :
     i = 1
     while (True) :
       if (i % x == 0) :
@@ -87,7 +88,7 @@ class c_looping :
         break
       i = i + 1
 
-  def outputCountBilPencacah_30(bil, n) :
+  def outputCountBilPencacah_30(self, bil, n) :
     count1 = 0
     count2 = 0
     count3 = 0
@@ -99,7 +100,7 @@ class c_looping :
         count2 = count2 + 1
       if (bil[i] == 3) :
         count3 = count3 + 1
-      if (bil[i] < 1 && bil[i] > 3) :
+      if (bil[i] < 1 and bil[i] > 3) :
         countUnd = countUnd + 1
 
     print("c1 =", count1)
@@ -107,7 +108,7 @@ class c_looping :
     print("c3 =", count2)
     print("cUnd =", countUnd)
 
-  def outputCalculateDeretBilBaseOnOp(bil, n, op) :
+  def outputCalculateDeretBilBaseOnOp(self, bil, n, op) :
     result = 0
     if (op == '*') :
       result = 1
@@ -121,7 +122,7 @@ class c_looping :
         result = result * bil[i]
     return result
 
-  def konversiToBiner_32(bil) :
+  def konversiToBiner_32(self, bil) :
     sisa = 0
     biner = ""
 
@@ -137,13 +138,13 @@ class c_looping :
 
     return biner
 
-  def OutputBintangSegiempat_33(n)
+  def OutputBintangSegiempat_33(self, n) :
     for i in range(0, n) :
       for j in range(0, i) :
         print("*", end="")
       print("")
 
-  def OutputBintangSegitiga_34(n)
+  def OutputBintangSegitiga_34(self, n) :
     i = 1
     while (i <= n) :
       for j in range(0, i) :
@@ -151,7 +152,7 @@ class c_looping :
       print("")
       i = i + 1
 
-  def geserBilKiri_36(str, n, nGeser)
+  def geserBilKiri_36(self, str, n, nGeser) :
     i = 0
     j = 0
     for i in range(0, nGeser) :
@@ -163,7 +164,7 @@ class c_looping :
       str[j] = temp
     return str
 
-  def OutputBintangSegitigaTerbalik_37(n) :
+  def OutputBintangSegitigaTerbalik_37(self, n) :
     i = 1
     while (i <= n) :
       j = 1

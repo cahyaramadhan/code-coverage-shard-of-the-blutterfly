@@ -131,7 +131,7 @@ class b_selection :
 
     # IF then [IF then EndIF] else [IF then-else EndIF] EndIF
     def getSizeKaos_12(self, T, BB) :
-        size = ' ' # 1
+        size = 'Unknown' # 1
         if T > 170 : # 2
             if BB > 60 and BB <= 80 : # 3
                 size = 'X' # 4
@@ -167,45 +167,3 @@ class b_selection :
     def OutputSwitchSwitch_20_1(self) :
         # consist of switch case
         return "Invalid"
-
-    # Ga tau ini variasi struktur mana sih
-    def nilaiTerbilang(self, bil) :
-        terbilang = '' # 1
-        terbilangSatuan = ["", "satu ", "dua ", "tiga ", "empat ", "lima ",  
-                            "enam ", "tujuh ", "delapan ", "sembilan "]
-        
-        if bil < 0 : # 2
-            bil = abs(bil) # 3
-            terbilang = "(negatif) "
-        elif bil == 0 : # 4
-            terbilang = "nol" # 5
-
-        ribu     = int(bil / 1000) # 6
-        ratus    = int((bil % 1000) / 100)
-        puluh    = int(((bil % 1000) % 100) / 10)
-        satuan   = int(((bil % 1000) % 100) % 10)
-
-        if ribu == 1 : # 7
-            terbilang = terbilang + "seribu" # 8
-        elif ribu >= 2 : # 9
-            terbilang = terbilang + terbilangSatuan[ribu] + "ribu" # 10
-
-        if ratus == 1 : # 11
-            terbilang = terbilang + "seratus" # 12
-        elif ribu >= 2 : # 13
-            terbilang = terbilang + terbilangSatuan[ratus] + "ratus" # 14
-
-        if puluh == 0 : # 15
-            terbilang = terbilang + terbilangSatuan[satuan] # 16
-        elif puluh == 1 : # 17
-            if satuan == 0 : # 18
-                terbilang = terbilang + "sepuluh" # 19
-            elif satuan == 1 : # 20
-                terbilang = terbilang + "sebelas" # 21
-            elif satuan >= 2 : # 22
-                terbilang = terbilang + terbilangSatuan[satuan] + "belas" # 23
-        elif puluh >= 2 : # 24
-            terbilang = terbilang + terbilangSatuan[puluh] + "puluh" + terbilangSatuan[satuan] # 25
-
-        return terbilang # 26
-        
